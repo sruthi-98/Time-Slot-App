@@ -1,8 +1,9 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 function Form() {
     const { slot } = useParams();
+    const history = useHistory();
 
     return (
         <div>
@@ -20,11 +21,11 @@ function Form() {
 
                 <div>
                     <label>Phone Number</label>
-                    <input type="number" name="" id=""/>
+                    <input type="tel" name="" id=""/>
                 </div>
 
                 <div>
-                    <button type="reset">Cancel</button>
+                    <button type="reset" onClick={() => history.push('/')}>Cancel</button>
                     <button type="submit">Submit</button>
                 </div>
             </form>
