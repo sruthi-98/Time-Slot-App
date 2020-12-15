@@ -5,7 +5,7 @@ function Form() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const { slot } = useParams();
+    const { date, slot } = useParams();
     const history = useHistory();
 
     useEffect(() => {
