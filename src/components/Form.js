@@ -1,6 +1,9 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function Form() {
+    const { slot } = useParams();
+
     return (
         <div>
             <h1>{slot}</h1>
