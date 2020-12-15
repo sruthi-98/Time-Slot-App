@@ -21,15 +21,20 @@ function TImeSlotList() {
     const generateSlots = (timeSlots) => {
         const slots = timeSlots.map(slot => {
             return (
-                <li onClick={() => history.push(`/form/${date}/${slot}`)}>{slot}</li>
+                <li 
+                    onClick={() => history.push(`/form/${date}/${slot}`)}
+                    className="text-white font-semibold uppercase p-5 m-6 rounded-lg cursor-pointer tracking-wider"
+                >
+                    {slot}
+                </li>
             )
         });
         return slots;
     }
     
     return (
-        <div>
-            <h1>{date}</h1>
+        <div className="p-8 mx-auto w-6/12">
+            <h1 className="text-4xl text-white font-black text-center mt-4 mb-8 tracking-wide">{date}</h1>
             <ul>{generateSlots(timeSlots)}</ul>
         </div>
     )
