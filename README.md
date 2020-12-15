@@ -11,3 +11,5 @@ A ReactJS application to manage time slots.
 3. To install all the dependencies, run ```npm install```.
 
 4. Once everything is installed, execute ```npm start``` to start the application.
+
+**Live Demo** : https://time-slot-app.herokuapp.com/
