@@ -7,17 +7,18 @@ function Form() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const { date, slot } = useParams();
     const history = useHistory();
+    const key = date + slot;
 
     useEffect(() => {
-        setFirstName(localStorage.getItem(`${slot}-firstName`));
-        setLastName(localStorage.getItem(`${slot}-lastName`));
-        setPhoneNumber(localStorage.getItem(`${slot}-phoneNumber`));
-    }, [slot]);
+        setFirstName(localStorage.getItem(`${key}-firstName`));
+        setLastName(localStorage.getItem(`${key}-lastName`));
+        setPhoneNumber(localStorage.getItem(`${key}-phoneNumber`));
+    }, [key]);
    
     const submit = () => {
-        localStorage.setItem(`${slot}-firstName`, firstName);
-        localStorage.setItem(`${slot}-lastName`, lastName);
-        localStorage.setItem(`${slot}-phoneNumber`, phoneNumber);
+        localStorage.setItem(`${key}-firstName`, firstName);
+        localStorage.setItem(`${key}-lastName`, lastName);
+        localStorage.setItem(`${key}-phoneNumber`, phoneNumber);
         history.push('/');
     }
 
