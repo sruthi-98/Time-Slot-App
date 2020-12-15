@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .container {
+        @apply mx-auto w-11/12 md:w-8/12 lg:w-6/12;
+    }
+
+    .heading {
+        @apply text-3xl md:text-4xl text-white font-black text-center mt-4 mb-8 tracking-wide;
+    }
+
+    .fieldGroup {
+        @apply w-full inline-block sm:flex text-white font-semibold my-6;
+    }
+
+    .fieldLabel {
+        @apply block sm:flex-1 py-4;
+    }
+
+    .fieldInput {
+        @apply w-full block py-4 sm:flex-1 rounded-md px-4;
+    }
+
+    .btn {
+        @apply py-4 font-semibold rounded-md;
+    }
+  }
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900');
 
 * {

@@ -24,51 +24,51 @@ function Form() {
 
     return (
         <div className="p-8">
-            <h1 className="text-4xl text-white font-black text-center mt-4 mb-8 tracking-wide">{slot}</h1>
-            <form onSubmit={submit} className="mx-auto w-6/12 my-20">
-                <div className="flex text-white font-semibold my-6">
-                    <label className="flex-1 py-4">First Name</label>
+            <h1 className="heading">{slot}</h1>
+            <form onSubmit={submit} className="container my-10 sm:my-20">
+                <div className="fieldGroup">
+                    <label className="fieldLabel">First Name</label>
                     <input 
                         type="text"
                         value={firstName}
                         onChange={e => setFirstName(e.target.value)}
                         id="firstName"
-                        className="flex-1 rounded-md px-4"
+                        className="fieldInput"
                     />
                 </div>
 
-                <div className="flex text-white font-semibold my-6">
-                    <label className="flex-1 py-4">Last Name</label>
+                <div className="fieldGroup">
+                    <label className="fieldLabel">Last Name</label>
                     <input 
                         type="text"
                         value={lastName}
                         onChange={e => setLastName(e.target.value)}
                         id="lastName"
-                        className="flex-1 rounded-md px-4"
+                        className="fieldInput"
                     />
                 </div>
 
-                <div className="flex text-white font-semibold my-6">
-                    <label className="flex-1 py-4">Phone Number</label>
+                <div className="fieldGroup">
+                    <label className="fieldLabel">Phone Number</label>
                     <input 
                         type="text"
                         value={phoneNumber}
                         onChange={e => setPhoneNumber(e.target.value)}
                         id="phoneNumber"
-                        className="flex-1 rounded-md px-4"
+                        className="fieldInput"
                     />
                 </div>
 
-                <div className="grid gap-10 grid-cols-2 text-white font-semibold my-20">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 text-white font-semibold my-10 sm:my-20">
                     <button 
                         type="reset" onClick={() => history.push('/')}
-                        className="py-4 font-semibold bg-red-500 rounded-md"
+                        className="btn bg-red-500"
                     >
                         Cancel
                     </button>
                     <button 
                         type="submit" 
-                        className="py-4 font-semibold bg-green-700 rounded-md"
+                        className="btn bg-green-700"
                     >
                         Save
                     </button>

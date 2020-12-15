@@ -20,10 +20,12 @@ function TimeSlotList() {
 
     const generateSlots = (timeSlots) => {
         const slots = timeSlots.map(slot => {
+            const key = date + slot;
+            const savedBG = localStorage.getItem(`${key}-firstName`) !== null ? "bg-red-500" : "";
             return (
                 <li 
                     onClick={() => history.push(`/form/${date}/${slot}`)}
-                    className="text-white font-semibold uppercase p-5 m-6 rounded-lg cursor-pointer tracking-wider"
+                    className={`text-white font-semibold uppercase p-5 m-6 rounded-lg cursor-pointer tracking-wider ${savedBG}`}
                 >
                     {slot}
                 </li>
@@ -33,8 +35,8 @@ function TimeSlotList() {
     }
     
     return (
-        <div className="p-8 mx-auto w-6/12">
-            <h1 className="text-4xl text-white font-black text-center mt-4 mb-8 tracking-wide">{date}</h1>
+        <div className="p-8 container">
+            <h1 className="heading">{date}</h1>
             <ul>{generateSlots(timeSlots)}</ul>
         </div>
     )
