@@ -7,7 +7,7 @@ function Form() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const { slot } = useParams();
     const history = useHistory();
-
+   
     const submit = () => {
         localStorage.setItem(`${slot}-firstName`, firstName);
         localStorage.setItem(`${slot}-lastName`, lastName);
@@ -25,6 +25,7 @@ function Form() {
                         type="text"
                         value={firstName}
                         onChange={e => setFirstName(e.target.value)}
+                        id="firstName"
                     />
                 </div>
 
@@ -34,6 +35,7 @@ function Form() {
                         type="text"
                         value={lastName}
                         onChange={e => setLastName(e.target.value)}
+                        id="lastName"
                     />
                 </div>
 
@@ -43,6 +45,7 @@ function Form() {
                         type="text"
                         value={phoneNumber}
                         onChange={e => setPhoneNumber(e.target.value)}
+                        id="phoneNumber"
                     />
                 </div>
 
