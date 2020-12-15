@@ -6,4 +6,9 @@
 
 * {
     font-family: 'Montserrat';
+    background-color: #262322;
+}
+
+li, input {
+    background-color: #4E4C4C;
 }
