@@ -16,10 +16,12 @@ function TImeSlotList() {
         return `${day} ${month} ${year}`;
     }
 
+    const date = getTodayDate();
+
     const generateSlots = (timeSlots) => {
         const slots = timeSlots.map(slot => {
             return (
-                <li onClick={() => history.push(`/form/${slot}`)}>{slot}</li>
+                <li onClick={() => history.push(`/form/${date}/${slot}`)}>{slot}</li>
             )
         });
         return slots;
@@ -27,7 +29,7 @@ function TImeSlotList() {
     
     return (
         <div>
-            <h1>{getTodayDate()}</h1>
+            <h1>{date}</h1>
             <ul>{generateSlots(timeSlots)}</ul>
         </div>
     )
