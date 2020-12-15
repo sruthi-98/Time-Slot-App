@@ -21,7 +21,7 @@ function TimeSlotList() {
     const generateSlots = (timeSlots) => {
         const slots = timeSlots.map(slot => {
             const key = date + slot;
-            const savedBG = localStorage.getItem(`${key}-firstName`) !== null ? "bg-red-500" : "";
+            const savedBG = localStorage.getItem(`${key}-firstName`) !== null ? "bg-red-600" : "";
             return (
                 <li 
                     onClick={() => history.push(`/form/${date}/${slot}`)}

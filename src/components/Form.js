@@ -62,7 +62,7 @@ function Form() {
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-2 text-white font-semibold my-10 sm:my-20">
                     <button 
                         type="reset" onClick={() => history.push('/')}
-                        className="btn bg-red-500"
+                        className="btn bg-red-600"
                     >
                         Cancel
                     </button>
