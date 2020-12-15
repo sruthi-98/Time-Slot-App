@@ -8,10 +8,17 @@ function Form() {
     const { slot } = useParams();
     const history = useHistory();
 
+    const submit = () => {
+        localStorage.setItem(`${slot}-firstName`, firstName);
+        localStorage.setItem(`${slot}-lastName`, lastName);
+        localStorage.setItem(`${slot}-phoneNumber`, phoneNumber);
+        history.push('/');
+    }
+
     return (
         <div>
             <h1>{slot}</h1>
-            <form>
+            <form onSubmit={submit}>
                 <div>
                     <label>First Name</label>
                     <input 
