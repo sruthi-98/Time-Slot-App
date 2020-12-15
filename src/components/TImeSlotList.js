@@ -1,6 +1,9 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function TImeSlotList() {
+    const history = useHistory();
+
     // Hard coded timeslot array
     const timeSlots = ['9 am - 10 am', '10 am - 11 am', '11 am - 12 pm', '12 pm - 1 pm', '1 pm - 2 pm', '2 pm - 3 pm', '3 pm - 4 pm', '4 pm - 5 pm'];
 
@@ -16,7 +19,7 @@ function TImeSlotList() {
     const generateSlots = (timeSlots) => {
         const slots = timeSlots.map(slot => {
             return (
-                <li>{slot}</li>
+                <li onClick={() => history.push(`/form/${slot}`)}>{slot}</li>
             )
         });
         return slots;
