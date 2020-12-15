@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function TImeSlotList() {
+function TimeSlotList() {
     const history = useHistory();
 
     // Hard coded timeslot array
@@ -40,4 +40,4 @@ function TImeSlotList() {
     )
 }
 
-export default TImeSlotList;
+export default TimeSlotList;
