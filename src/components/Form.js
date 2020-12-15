@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
 function Form() {
@@ -7,6 +7,12 @@ function Form() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const { slot } = useParams();
     const history = useHistory();
+
+    useEffect(() => {
+        setFirstName(localStorage.getItem(`${slot}-firstName`));
+        setLastName(localStorage.getItem(`${slot}-lastName`));
+        setPhoneNumber(localStorage.getItem(`${slot}-phoneNumber`));
+    }, [slot]);
    
     const submit = () => {
         localStorage.setItem(`${slot}-firstName`, firstName);
