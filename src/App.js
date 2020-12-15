@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from './components/Form';
 import Header from './components/Header';
-import TImeSlotList from './components/TImeSlotList';
+import TimeSlotList from './components/TimeSlotList';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           </Route>
           <Route path='/'>
             <Header />
-            <TImeSlotList />
+            <TimeSlotList />
           </Route>
         </Switch>
       </div>
