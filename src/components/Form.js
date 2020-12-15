@@ -33,6 +33,7 @@ function Form() {
                         value={firstName}
                         onChange={e => setFirstName(e.target.value)}
                         id="firstName"
+                        required
                         className="fieldInput"
                     />
                 </div>
@@ -55,6 +56,7 @@ function Form() {
                         value={phoneNumber}
                         onChange={e => setPhoneNumber(e.target.value)}
                         id="phoneNumber"
+                        required
                         className="fieldInput"
                     />
                 </div>
