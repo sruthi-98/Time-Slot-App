@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path='/form/:slot'>
+          <Route path='/form/:date/:slot'>
             <Header />
             <Form />
           </Route>
